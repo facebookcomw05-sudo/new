@@ -21,14 +21,14 @@ function waitForFirebase() {
 waitForFirebase().then(() => {
   // إعدادات Firebase
   const firebaseConfig = {
-    apiKey: "AIzaSyBg9k9ralgHyx6cBTIXcOiHSiE-Nm9ZaA4",
-    authDomain: "web-programming-d3561.firebaseapp.com",
-    projectId: "web-programming-d3561",
-    storageBucket: "web-programming-d3561.firebasestorage.app",
-    messagingSenderId: "307497227438",
-    appId: "1:307497227438:web:0ee66f2fc924db4582c93f",
-    measurementId: "G-4P6HXQJ232"
-  };
+  apiKey: "AIzaSyBb8u2La-3zBI-wX-i57a9qqewCO1UF2x0",
+  authDomain: "web-yes.firebaseapp.com",
+  projectId: "web-yes",
+  storageBucket: "web-yes.firebasestorage.app",
+  messagingSenderId: "956753544595",
+  appId: "1:956753544595:web:f16eb9f455517f59e45466",
+  measurementId: "G-KE7F74R66W"
+};
 
   if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
