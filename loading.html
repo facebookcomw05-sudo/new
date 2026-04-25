@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>جارٍ تحميل الصفحة...</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2500);
+  </script>
+</head>
+
+<body class="loading-body">
+  <div class="loader-container">
+    <div class="logo">
+      <svg width="70" height="70" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="45" stroke="#3b82f6" stroke-width="6"/>
+        <path d="M30 65 L30 35 L50 55 L70 35 L70 65" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="logo-text">نعم لبناء الوطن</span>
+    </div>
+
+    <div class="loader-text">جارٍ تحميل الصفحة<span class="dots"></span></div>
+  </div>
+</body>
+</html>

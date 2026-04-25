@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>طلب منحة – جمعية نعم</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="sub-hero"><h1>استمارة طلب منحة 100 دولار</h1><p>يرجى تعبئة جميع الحقول بدقة. أي معلومات غير صحيحة قد تؤدي إلى رفض الطلب.</p></header>
+  <main class="container">
+    <section class="card">
+      <form id="grantForm">
+        <div class="form-group"><label>الاسم:</label><input type="text" name="firstName" required></div>
+        <div class="form-group"><label>الكنية:</label><input type="text" name="lastName" required></div>
+        <div class="form-group"><label>العمر:</label><input type="number" name="age" min="18" max="90" required></div>
+        <div class="form-group"><label>الرقم الوطني:</label><input type="text" name="nationalId" required></div>
+        <div class="form-group"><label>رقم الجوال:</label><input type="tel" name="phone" required></div>
+        <div class="form-group"><label>البريد الإلكتروني:</label><input type="email" name="email" required></div>
+        <div class="form-group"><label>كلمة السر (للدخول لاحقاً):</label><input type="password" name="password" required></div>
+        <div class="form-group"><label>العمل:</label><input type="text" name="job" required></div>
+        <div class="form-group"><label>المحافظة:</label><select name="province" required><option value="">اختر</option><option>دمشق</option><option>ريف دمشق</option><option>حلب</option><option>حمص</option><option>حماة</option><option>اللاذقية</option><option>طرطوس</option><option>إدلب</option><option>دير الزور</option><option>الرقة</option><option>الحسكة</option><option>درعا</option><option>السويداء</option><option>القنيطرة</option></select></div>
+        <div class="form-group"><label>ملاحظات إضافية:</label><textarea name="notes" rows="2"></textarea></div>
+        <div class="form-group"><label>المشاكل الصحية (إن وجدت):</label><textarea name="health" rows="3" required></textarea></div>
+        <button type="submit" class="btn-primary">تسجيل الطلب</button>
+      </form>
+    </section>
+  </main>
+  <!-- نافذة تأكيد أولى -->
+  <div id="confirmModal1" class="modal hidden"><div class="modal-content"><h2>مراجعة البيانات</h2><p>تأكد من صحة جميع البيانات. هل تريد المتابعة؟</p><div class="modal-actions"><button id="confirmYes1" class="btn-primary">نعم، تابع</button><button id="confirmNo1" class="btn-secondary">تعديل</button></div></div></div>
+  <!-- نافذة تأكيد ثانية -->
+  <div id="confirmModal2" class="modal hidden"><div class="modal-content"><h2>تأكيد نهائي</h2><p>أنت على وشك إرسال الطلب نهائياً. بعد الإرسال لا يمكن التعديل. هل أنت متأكد؟</p><div class="modal-actions"><button id="confirmYes2" class="btn-primary">نعم، أرسل</button><button id="confirmNo2" class="btn-secondary">الرجوع</button></div></div></div>
+  <div id="successModal" class="modal hidden"><div class="modal-content"><h2>تم إرسال الطلب</h2><p>شكراً لك. سيتم التواصل معك بعد التحقق من البيانات.</p><button id="successOk" class="btn-primary">حسناً</button></div></div>
+  <div id="errorModal" class="modal hidden"><div class="modal-content"><h2>خطأ</h2><p>حدث خطأ، حاول مجدداً.</p><button id="errorOk" class="btn-secondary">إغلاق</button></div></div>
+  <footer class="footer"><p>© 2026 جمعية نعم لبناء الوطن – برنامج المنح المالية.</p></footer>
+  <!-- ... بعد footer ... -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
